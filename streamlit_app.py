@@ -29,7 +29,7 @@ os.environ['REPLICATE_API_TOKEN'] = replicate_api
 # Store the LLM Generated response
 
 if "messages" not in st.session_state.keys():
-    st.session_state.messages = [{"role":"assistant","content": "HI There, Welcome what are you interested in looking for today? "}]
+    st.session_state.messages = [{"role":"assistant","content": "How may I assist you today?"}]
 
 # Display or clear chat message
 
@@ -38,7 +38,7 @@ for message in st.session_state.messages:
         st.write(message["content"])
 
 def clear_chat_history():
-    st.session_state.messages = [{"role":"assistant","content": "HI There, Welcome what are you interested in looking for today? "}]
+    st.session_state.messages = [{"role":"assistant","content": "How may I assist you today?"}]
 st.sidebar.button('Clear Chat History',on_click=clear_chat_history)
 
 
@@ -53,7 +53,7 @@ def generate_llama2_response(prompt_input):
         else:
             string_dialogue += "Assistant" + dict_message["content"] + "\\n\\n"
     output = replicate.run('a16z-infra/llama13b-v2-chat:df7690f1994d94e96ad9d568eac121aecf50684a0b0963b25a41cc40061269e5',
-                           input = {"prompt": f"{string_dialogue}{prompt_input} Assistant:",
+                           input = {"prompt": f"{string_dialogue}{prompt_input} Assistant: ",
                                     "temperature":temperature, "top_p":top_p, "max_length":max_length, "repetition_penalty":1})
    
     return output
