@@ -8,7 +8,7 @@ st.set_page_config(page_title="🦙💬 Llama 2 Chatbot")
 # Replicate Credentials
 with st.sidebar:
     st.title('🦙💬 Llama 2 Chatbot')
-    st.markdown("Getting your Replicate API token is a simple 3-step process:           \n 1.Go to [Replicate](https://replicate.com/signin/).      \n 2.Sign in with your GitHub account. \n 3. Proceed to the API tokens page and copy your API token.")
+    st.markdown("Getting your Replicate API token is a simple 3-step process:           \n 1.Go to [Replicate](https://replicate.com/signin/).      \n 2.Sign in with your GitHub account.      \n 3.Proceed to the API tokens page and copy your API token.")
     if 'REPLICATE_API_TOKEN' in st.secrets:
         st.success('API key already provided!', icon='✅')
         replicate_api = st.secrets['REPLICATE_API_TOKEN']
