@@ -47,7 +47,7 @@ st.sidebar.button('Clear Chat History',on_click=clear_chat_history)
 
 def generate_llama2_response(prompt_input):
     string_dialogue = "You are a helpful assistant. You do not respond as 'User' or pretend to  be a 'User'. You only respond once as 'Assistant'."
-    for dict_message in st.session_state.messsage:
+    for dict_message in st.session_state.messsages:
         if dict_message["role"] == "user":
             string_dialogue += "User" + dict_message["content"] + "\\n\\n"
         else:
