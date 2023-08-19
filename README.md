@@ -1,7 +1,8 @@
-```
 # Llama 2 Chatbot
 
 This is a chatbot app built using the Llama 2 open-source LLM model from Meta. It uses the Llama2-7B model deployed by the Andreessen Horowitz (a16z) team and hosted on the Replicate platform. This app was refactored from a16z's implementation of their LLaMA2 Chatbot to be light-weight for deployment to the Streamlit Community Cloud.
+
+You can try the bot here - [LLAMA2 Chatbot] https://llama2app-dq6xbwry2tf2cw7mnrhsem.streamlit.app/
 
 ## Getting Started
 
@@ -29,6 +30,11 @@ streamlit run app.py
 ## Usage
 
 Enter your Replicate API token and a message prompt in the chat box to start chatting with the Llama 2 chatbot.
+
+### Bot
+
+![image](https://github.com/wolfsbane9513/Llama2_streamlit/assets/11406551/5bc340c9-03a6-464e-9c7b-94d0ff84d08f)
+
 
 ## License
 
