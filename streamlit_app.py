@@ -1,7 +1,7 @@
 import streamlit as st
 import replicate
 import os
-
+from logging import logger
 # App title
 st.set_page_config(page_title="🦙💬 Llama 2 Chatbot")
 
@@ -70,7 +70,7 @@ if st.session_state.messages[-1]["role"] != "assistant":
     with st.chat_message("assistant"):
         with st.spinner("Thinking..."):
             response = generate_llama2_response(prompt)
-            print(prompt,response)
+            logger.info(f"user prompt and api response {prompt},{response}")
             placeholder = st.empty()
             full_response = ''
             for item in response:
