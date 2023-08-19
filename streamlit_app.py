@@ -69,7 +69,7 @@ if prompt := st.chat_input(disabled= not replicate_api):
 
 if st.session_state.messages[-1]["role"] != "assistant":
     with st.chat_message("assistant"):
-        with st.spinner["Thinking..."]:
+        with st.spinner("Thinking..."):
             response = generate_llama2_response(prompt)
             placeholder = st.empty()
             full_response = ''
