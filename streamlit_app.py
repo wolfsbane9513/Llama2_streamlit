@@ -1,10 +1,11 @@
 import streamlit as st
 import replicate
 import os
-from logging import logger
+from logging import Logger
 # App title
 st.set_page_config(page_title="🦙💬 Llama 2 Chatbot")
 
+logger = Logger()
 # Replicate credentials
 
 with st.sidebar:
